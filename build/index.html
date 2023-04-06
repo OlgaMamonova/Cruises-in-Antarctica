@@ -11,9 +11,9 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="container">
+        <div class="header__wrapper container">
           <div class="header__mobile-wrapper">
-            <a class="header__logo logo" href="/">
+            <a class="header__logo logo" href="#start">
               <svg
                 class="logo__svg"
                 width="70"
@@ -24,7 +24,17 @@
                 <use href="img/sprite.svg#logo"></use>
               </svg>
             </a>
-            <button class="header__burger-toggle"></button>
+            <button class="header__burger-toggle">
+              <span
+                class="header__burger-line header__burger-line--first"
+              ></span>
+              <span
+                class="header__burger-line header__burger-line--second"
+              ></span>
+              <span
+                class="header__burger-line header__burger-line--third"
+              ></span>
+            </button>
           </div>
           <nav class="header__nav nav">
             <ul class="nav__list">
@@ -40,12 +50,13 @@
               <li class="nav__item">
                 <a class="nav__link" href=""> Контакты </a>
               </li>
+
             </ul>
           </nav>
         </div>
       </header>
       <main>
-        <section class="promo">
+        <section class="promo" id="start">
           <div class="container">
             <h1>Круизы в&nbsp;Антарктику</h1>
             <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>

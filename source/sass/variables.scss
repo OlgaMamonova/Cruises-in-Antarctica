@@ -19,9 +19,9 @@ $color-torch-red: #ff1553;
 // Gradient
 
 $black-to-right: linear-gradient(
-  90deg,
-  rgba(0, 0, 0, 0.75) 0%,
-  rgba(0, 0, 0, 0) 75%
+  to right,
+  rgba(0, 43, 102, 0.5) 11.25%,
+  rgba(249, 251, 253, 0) 88.75%
 );
 
 // Typography
