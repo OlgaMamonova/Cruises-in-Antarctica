@@ -1,60 +1,20 @@
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dppx) {
     @content;
   }
 }
 
-@mixin hover {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
-  }
-}
+// @mixin vp-1919 {
+//   @media (max-width: ($vp-1920 - 1px)) {
+//     @content;
+//   }
+// }
 
-@mixin focus {
-  &.focus-visible:focus {
-    @content;
-  }
-}
-
-@mixin active {
-  &.focus-visible:active {
-    @content;
-  }
-}
-
-@mixin hover-focus {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
-  }
-
-  &.focus-visible:focus {
-    @content;
-  }
-}
-
-// Desktop first
-
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1439 {
-  @media (max-width: ($vp-1440 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1279 {
-  @media (max-width: ($vp-1280 - 1px)) {
-    @content;
-  }
-}
+// @mixin vp-1317 {
+//   @media (max-width: ($vp-1318 - 1px)) {
+//     @content;
+//   }
+// }
 
 @mixin vp-1023 {
   @media (max-width: ($vp-1024 - 1px)) {
@@ -64,6 +24,24 @@
 
 @mixin vp-767 {
   @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1023-retina {
+  @media (max-width: ($vp-1024 - 1px)) and (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin vp-767-retina {
+  @media (max-width: ($vp-768 - 1px)) and (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin desktop-retina {
+  @media (min-width: ($vp-1024)) and (min-resolution: $retina-dppx) {
     @content;
   }
 }
