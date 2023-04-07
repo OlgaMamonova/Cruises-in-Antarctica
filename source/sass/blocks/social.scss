@@ -1,0 +1,36 @@
+.social {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  @include vp-767 {
+    justify-content: flex-start;
+  }
+}
+
+.social__link {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.social__svg {
+  color: $color-alice-blue;
+
+  @include vp-1023 {
+    width: 16px;
+    height: 16px;
+
+    &--ok {
+      width: 9.6px;
+    }
+  }
+}

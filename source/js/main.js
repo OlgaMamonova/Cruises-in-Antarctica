@@ -3,7 +3,6 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initBurger} from './modules/burger';
 
-// ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 

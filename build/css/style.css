@@ -724,7 +724,11 @@ button,
   background-image: -webkit-gradient(linear, left top, right top, color-stop(11.25%, rgba(0, 43, 102, 0.5)), color-stop(11.25%, rgb(249, 251, 253)));
   background-image: -o-linear-gradient(left, rgba(0, 43, 102, 0.5) 11.25%, rgb(249, 251, 253) 11.25%);
   background-image: linear-gradient(to right, rgba(0, 43, 102, 0.5) 11.25%, rgb(249, 251, 253) 11.25%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   min-height: 100vh;
+  overflow: scroll;
 }
 
 .header--menu-opened .header__wrapper {
@@ -733,7 +737,7 @@ button,
 }
 
 .header--menu-opened .header__mobile-wrapper {
-  margin-bottom: 33px;
+  margin-bottom: 42px;
 }
 
 .header--menu-opened .header__nav {
@@ -757,15 +761,15 @@ button,
 }
 
 .header--menu-opened .header__burger-line--first {
-  -webkit-transform: rotate(-45deg) translateY(7px);
-  -ms-transform: rotate(-45deg) translateY(7px);
-  transform: rotate(-45deg) translateY(7px);
+  -webkit-transform: rotate(-45deg) translateY(8px);
+  -ms-transform: rotate(-45deg) translateY(8px);
+  transform: rotate(-45deg) translateY(8px);
 }
 
 .header--menu-opened .header__burger-line--third {
-  -webkit-transform: rotate(45deg) translateY(-7px);
-  -ms-transform: rotate(45deg) translateY(-7px);
-  transform: rotate(45deg) translateY(-7px);
+  -webkit-transform: rotate(45deg) translateY(-8px);
+  -ms-transform: rotate(45deg) translateY(-8px);
+  transform: rotate(45deg) translateY(-8px);
 }
 
 .promo {
@@ -794,6 +798,33 @@ button,
   font-size: 20px;
   line-height: 24.4px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.social__link:hover,
+.social__link:focus {
+  opacity: 0.8;
+}
+
+.social__link:active {
+  opacity: 0.6;
+}
+
+.social__svg {
+  color: #f9fbfd;
 }
 
 .footer {
@@ -885,6 +916,15 @@ button,
     line-height: 22px;
     text-shadow: none;
   }
+
+  .social__svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .social__svg--ok {
+    width: 9.6px;
+  }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
@@ -932,7 +972,7 @@ button,
   }
 
   .header__nav .nav__item {
-    margin-bottom: 10px;
+    margin-bottom: 26px;
   }
 
   .header__nav .nav__link {
@@ -984,6 +1024,12 @@ button,
   .promo p {
     font-size: 16px;
     max-width: 80%;
+  }
+
+  .social {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
