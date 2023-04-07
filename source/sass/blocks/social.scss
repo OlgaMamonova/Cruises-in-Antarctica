@@ -11,7 +11,25 @@
   }
 }
 
+.social__item {
+  margin-left: 27px;
+  margin-top: 9px;
+
+  @include vp-1023 {
+    margin-left: 21.4px;
+    margin-top: 8px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 22px;
+  }
+}
+
 .social__link {
+  display: inline-block;
+
   &:hover,
   &:focus {
     opacity: 0.8;
