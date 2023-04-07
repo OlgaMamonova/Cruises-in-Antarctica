@@ -461,48 +461,37 @@ video {
   height: auto;
 }
 
-textarea {
-  resize: none;
-}
-
 input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0 1000px #f9fbfd;
   box-shadow: inset 0 0 0 1000px #f9fbfd;
   -webkit-text-fill-color: #011c40;
 }
 
-input,
-textarea {
+input {
   border-radius: 0;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
   opacity: 1;
 }
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder {
   opacity: 1;
 }
 
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+input:-ms-input-placeholder {
   opacity: 1;
 }
 
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
+input::-ms-input-placeholder {
   opacity: 1;
 }
 
-input::placeholder,
-textarea::placeholder {
+input::placeholder {
   opacity: 1;
 }
 
-input:invalid,
-textarea:invalid {
+input:invalid {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -512,14 +501,7 @@ input::-ms-reveal {
   display: none;
 }
 
-textarea,
-input:matches([type=email],
-[type=number],
-[type=password],
-[type=search],
-[type=tel],
-[type=text],
-[type=url]) {
+input:matches([type=email], [type=tel], [type=text]) {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -527,7 +509,6 @@ input:matches([type=email],
 
 button,
 [type=button],
-[type=reset],
 [type=submit] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -597,10 +578,6 @@ button,
   -webkit-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
-}
-
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
 }
 
 .container {
@@ -933,47 +910,6 @@ button,
 .footer__nav {
   max-width: 69%;
 }
-
-/* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
-
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-  }
-*/
-
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1024px) and (min-resolution: 2dppx) {
   .promo {

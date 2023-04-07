@@ -46,10 +46,6 @@ video {
   height: auto;
 }
 
-textarea {
-  resize: none;
-}
-
 // chrome autofill background removal
 // если на проекте у инпутов используются разные цвета фонов\текста -
 // удалите это из глобала и используйте локально с нужными цветами
@@ -63,8 +59,7 @@ input:-webkit-autofill {
 }
 
 // firefox placeholder \ invalid fix + ios bdrs
-input,
-textarea {
+input {
   border-radius: 0;
 
   &::placeholder {
@@ -86,22 +81,12 @@ input {
 
 // ios button \ inputs reset
 
-textarea,
-input:matches(
-    [type="email"],
-    [type="number"],
-    [type="password"],
-    [type="search"],
-    [type="tel"],
-    [type="text"],
-    [type="url"]
-  ) {
+input:matches([type="email"], [type="tel"], [type="text"]) {
   appearance: none;
 }
 
 button,
 [type="button"],
-[type="reset"],
 [type="submit"] {
   appearance: none;
 }
