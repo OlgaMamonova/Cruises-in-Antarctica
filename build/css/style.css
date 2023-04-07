@@ -849,11 +849,16 @@ button,
 }
 
 .footer__social {
+  max-width: 22.1%;
   margin-left: auto;
 }
 
 .footer__logo {
   margin-right: 6px;
+}
+
+.footer__nav {
+  max-width: 69%;
 }
 
 /* @mixin hover-focus {
@@ -1095,6 +1100,7 @@ button,
 
   .footer__social {
     margin-left: 0;
+    max-width: 100%;
   }
 
   .footer__logo {
@@ -1103,6 +1109,7 @@ button,
   }
 
   .footer__nav {
+    max-width: 100%;
     margin-bottom: 25px;
   }
 

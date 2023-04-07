@@ -1,6 +1,6 @@
 .footer {
   background-color: $color-tangaroa;
-  padding:  50px 0;
+  padding: 50px 0;
 
   @include vp-767 {
     padding: 40px 0;
@@ -18,10 +18,12 @@
 }
 
 .footer__social {
+  max-width: 22.1%;
   margin-left: auto;
 
   @include vp-767 {
     margin-left: 0;
+    max-width: 100%;
   }
 }
 
@@ -39,7 +41,10 @@
 }
 
 .footer__nav {
+  max-width: 69%;
+
   @include vp-767 {
+    max-width: 100%;
     margin-bottom: 25px;
   }
 }
