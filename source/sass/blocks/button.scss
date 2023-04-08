@@ -1,0 +1,27 @@
+.button {
+  display: inline-flex;
+  padding: 10px 10px 9px;
+  color: $color-tangaroa;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  background-color: $color-alice-blue;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
