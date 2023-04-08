@@ -1,6 +1,7 @@
 .promo {
   background-color: $color-tangaroa;
   color: $color-alice-blue;
+  box-shadow: 0 4px 4px rgba($color-black, 0.25);
   position: relative;
   padding: 270px 0 278px;
   background-repeat: no-repeat;
@@ -14,6 +15,7 @@
   @include vp-1023 {
     padding: 267px 0 275px;
     background-image: url("../img/background/promo-tablet.webp");
+    box-shadow: none;
   }
 
   @include vp-1023-retina {
@@ -21,7 +23,7 @@
   }
 
   @include vp-767 {
-    padding: 175px 0 180px;
+    padding: 175px 0 179px;
     background-image: url("../img/background/promo-mobile.webp");
   }
 
