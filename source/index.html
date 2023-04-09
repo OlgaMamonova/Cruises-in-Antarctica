@@ -7,13 +7,34 @@
     <meta name="description" content="Путешествие на край Земли" >
     <title>Круизы в Антарктику</title>
     <link rel="stylesheet" href="css/style.min.css" >
+    <link
+      rel="preload"
+      href="fonts/Montserrat-Medium.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    >
+    <link
+      rel="preload"
+      href="fonts/Montserrat-Regular.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    >
+    <link
+      rel="preload"
+      href="fonts/Montserrat-Bold.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    >
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="header__wrapper container">
           <div class="header__mobile-wrapper">
-            <a class="header__logo logo" href="#start">
+            <a class="header__logo logo" href="#start" aria-label="логотип компании">
               <svg
                 class="logo__svg"
                 width="70"
@@ -24,7 +45,7 @@
                 <use href="img/sprite.svg#logo"></use>
               </svg>
             </a>
-            <button class="header__burger-toggle">
+            <button class="header__burger-toggle" type="button" aria-label="переключатель бургер-меню">
               <span
                 class="header__burger-line header__burger-line--first"
               ></span>
@@ -729,6 +750,8 @@
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              title="Офис компании по адресу ул. Большая
+            Конюшенная, д. 19/8, Санкт-Петербург"
             ></iframe>
             <picture>
               <source
@@ -789,7 +812,7 @@
       </main>
       <footer class="footer">
         <div class="footer__wrapper container">
-          <a class="footer__logo logo" href="#start">
+          <a class="footer__logo logo" href="#start" aria-label="логотип компании">
             <svg
               class="logo__svg"
               width="70"
@@ -818,7 +841,7 @@
           </nav>
           <ul class="footer__social social">
             <li class="social__item">
-              <a class="social__link" href="/">
+              <a class="social__link" href="/" aria-label="мы в одноклассниках">
                 <svg
                   class="social__svg social__svg--ok"
                   width="12"
@@ -831,7 +854,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="/">
+              <a class="social__link" href="/" aria-label="мы в dzen">
                 <svg
                   class="social__svg"
                   width="20"
@@ -844,7 +867,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="/">
+              <a class="social__link" href="/" aria-label="мы в reddit">
                 <svg
                   class="social__svg"
                   width="20"
