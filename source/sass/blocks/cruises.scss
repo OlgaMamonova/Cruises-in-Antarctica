@@ -65,10 +65,6 @@
   min-height: 100%;
 }
 
-.cruises__card dd {
-  margin: 0;
-}
-
 .cruises__card h3 {
   font-size: 18px;
   line-height: 27px;
@@ -95,6 +91,7 @@
 }
 
 .cruises__card dd {
+  margin: 0;
   color: $color-qaurtz;
   margin-bottom: 12px;
 }

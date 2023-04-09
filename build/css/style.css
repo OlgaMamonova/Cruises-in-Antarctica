@@ -496,11 +496,6 @@ input:invalid {
   box-shadow: none;
 }
 
-input::-ms-clear,
-input::-ms-reveal {
-  display: none;
-}
-
 input:matches([type=email], [type=tel], [type=text]) {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1171,10 +1166,6 @@ button,
   min-height: 100%;
 }
 
-.cruises__card dd {
-  margin: 0;
-}
-
 .cruises__card h3 {
   font-size: 18px;
   line-height: 27px;
@@ -1197,6 +1188,7 @@ button,
 }
 
 .cruises__card dd {
+  margin: 0;
   color: #d8d8d9;
   margin-bottom: 12px;
 }
