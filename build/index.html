@@ -48,7 +48,7 @@
                 <a class="nav__link" href="#cruises"> Ближайшие круизы </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href=""> Контакты </a>
+                <a class="nav__link" href="#contacts"> Контакты </a>
               </li>
             </ul>
           </nav>
@@ -718,6 +718,64 @@
             </div>
           </div>
         </section>
+        <section class="contacts container" id="contacts">
+          <div class="contacts__map" id="map">
+            <picture>
+              <source
+                type="image/webp"
+                media="(max-width: 767px)"
+                srcset="
+                  img/background/map-mobile.webp    1x,
+                  img/background/map-mobile@2x.webp 2x
+                " />
+              <source
+                type="image/webp"
+                media="(max-width: 1023px)"
+                srcset="
+                  img/background/map-tablet.webp    1x,
+                  img/background/map-tablet@2x.webp 2x
+                " />
+              <source
+                type="image/webp"
+                srcset="
+                  img/background/map-desktop.webp    1x,
+                  img/background/map-desktop@2x.webp 2x
+                " />
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  img/background/map-mobile.jpg    1x,
+                  img/background/map-mobile@2x.jpg 2x
+                " />
+              <source
+                media="(max-width: 1023px)"
+                srcset="
+                  img/background/map-tablet.jpg    1x,
+                  img/background/map-tablet@2x.jpg 2x
+                " />
+              <source
+                srcset="
+                  img/background/map-desktop.jpg    1x,
+                  img/background/map-desktop@2x.jpg 2x
+                " />
+              <img
+                src="img/background/map-desktop.jpg"
+                width="560"
+                height="306"
+                alt="мы на карте."
+            /></picture>
+          </div>
+          <div class="contacts__text">
+            <p>
+              У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте
+              к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.
+            </p>
+            <address>
+              г. Санкт-Петербург, ул.&nbsp;Большая&nbsp;Конюшенная, 19/8
+            </address>
+            <a href="tel:8-800-200-00-00">8-800-200-00-00</a>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="footer__wrapper container">
@@ -744,7 +802,7 @@
                 <a class="nav__link" href="#cruises"> Ближайшие круизы </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href=""> Контакты </a>
+                <a class="nav__link" href="#contacts"> Контакты </a>
               </li>
             </ul>
           </nav>
