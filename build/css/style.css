@@ -1473,7 +1473,7 @@ button,
   }
 
   .social__item {
-    margin-left: 21.4px;
+    margin-left: 22.4px;
     margin-top: 8px;
   }
 
@@ -1654,6 +1654,10 @@ button,
 
   .contacts__text a {
     background-position: 0 3px;
+  }
+
+  .footer {
+    padding: 43px 0 45px;
   }
 
   .footer__logo {
@@ -1936,7 +1940,7 @@ button,
   }
 
   .footer {
-    padding: 40px 0;
+    padding: 40px 0 34px;
   }
 
   .footer__wrapper {
@@ -1961,7 +1965,7 @@ button,
 
   .footer__nav {
     max-width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   .footer__nav .nav__link {
