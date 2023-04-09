@@ -629,7 +629,94 @@
           </ul>
         </section>
         <section class="booking">
-          <div class="booking__wrapper container"></div>
+          <div class="booking__wrapper container">
+            <div class="booking__text">
+              <h2>Раннее бронирование</h2>
+              <p>
+                Забронируйте тур<br class="mobile-only" />
+                за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте
+                до&nbsp;50%
+              </p>
+            </div>
+            <div class="booking__form" data-form-validate data-callback="base">
+              <p>
+                Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами
+                в&nbsp;ближайшее время
+              </p>
+              <form action="https://echo.htmlacademy.ru" method="get">
+                <div
+                  class="custom-input"
+                  data-validate-type="text"
+                  data-limitation="name"
+                  data-message-base="Заполните это поле"
+                  data-message-extra="Некорректно заполнено"
+                  data-required
+                >
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Имя"
+                    required
+                    autocomplete="off"
+                  />
+                  <label class="visually-hidden" for="name">Ваше имя</label>
+                </div>
+                <div
+                  class="custom-input"
+                  data-validate-type="phone"
+                  data-message-base="Заполните это поле"
+                  data-message-extra="Некорректно заполнено"
+                  data-required
+                >
+                  <input
+                    id="tel"
+                    name="tel"
+                    type="tel"
+                    placeholder="Телефон"
+                    autocomplete="off"
+                    required
+                  />
+                  <label class="visually-hidden" for="tel"
+                    >Номер телефона</label
+                  >
+                </div>
+                <div
+                  class="custom-input"
+                  data-validate-type="email"
+                  data-message-base="Заполните это поле"
+                  data-message-extra="Некорректно заполнено"
+                  data-required
+                >
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    autocomplete="off"
+                    required
+                  />
+                  <label class="visually-hidden" for="email"
+                    >Электронная почта</label
+                  >
+                </div>
+                <div class="custom-toggle">
+                  <label
+                    data-validate-type="checkbox"
+                    data-message-base="Дайте согласие"
+                  >
+                    <input type="checkbox" name="accept" checked required />
+                    <span class="custom-toggle__icon"></span>
+                    <span class="custom-toggle__label"
+                      >Я&nbsp;согласен на&nbsp;обработку моих персональных
+                      данных</span
+                    >
+                  </label>
+                </div>
+                <button type="submit">Оставить заявку</button>
+              </form>
+            </div>
+          </div>
         </section>
       </main>
       <footer class="footer">

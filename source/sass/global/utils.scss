@@ -34,6 +34,14 @@
   clip-path: inset(100%);
 }
 
+.mobile-only {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
 .scroll-lock-ios {
   position: fixed;
 

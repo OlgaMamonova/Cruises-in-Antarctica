@@ -1,111 +1,51 @@
-.custom-input,
-.custom-textarea {
+.custom-input {
   position: relative;
-
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
 
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
+  input {
     width: 100%;
+    flex-grow: 1;
+    background-color: $color-alice-blue;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: inherit;
+    color: $color-tangaroa;
+    padding: 10px 14px 10.5px;
+    margin-bottom: 20px;
   }
 
-  label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
-    }
+  input::placeholder {
+    color: rgba($color-tangaroa, 0.7);
+    font-size: 14px;
+    line-height: 21px;
+    font-family: inherit;
   }
 
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
-    }
-  }
-
-  &__error {
-    position: absolute;
-    right: 0;
-    bottom: 35px;
-
-    color: #ff1553;
-
-    opacity: 0;
-
-    transition: opacity 0.3s ease;
-
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
-    }
-  }
-
-  &.is-invalid {
-    input,
-    textarea {
-      border: 2px solid #ff1553;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
-      }
-    }
-  }
-
-  &.is-valid {
-    input {
-      border: 2px solid #22b259;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
-      }
-    }
+  input:hover,
+  input:focus {
+    background-color: rgba($color-alice-blue, 0.8);
   }
 
   .input-message {
+    font-size: 14px;
+    line-height: 16px;
     position: absolute;
     right: 0;
-    bottom: -5px;
+    bottom: 2px;
+  }
 
-    &.is-invalid {
-      color: #ff0000;
-    }
+  .input-message.is-invalid {
+    color: $color-red;
+  }
+}
 
-    &.is-valid {
-      color: #15ab07;
+.custom-input.is-invalid {
+  input {
+    border: 2px solid $color-red;
+
+    &:focus,
+    &:hover {
+      border: 2px solid rgba($color-red, 0.5);
     }
   }
 }
