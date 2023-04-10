@@ -2,7 +2,6 @@
   padding-top: 120px;
   padding-bottom: 120px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   @include vp-1023 {
@@ -44,15 +43,18 @@
 
 .contacts__text {
   width: 43.1%;
+  padding-top: 74px;
 
   @include vp-1023 {
     width: 47.79%;
     padding-bottom: 3px;
+    padding-top: 65px;
   }
 
   @include vp-767 {
     width: 100%;
     margin-bottom: 33px;
+    padding-top: 0;
   }
 }
 

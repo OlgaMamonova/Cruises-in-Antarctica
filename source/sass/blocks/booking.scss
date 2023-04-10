@@ -31,21 +31,23 @@
 .booking__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 105px;
 
   @include vp-1023 {
     flex-direction: column;
+    align-items: center;
   }
 }
 
 .booking__text {
   width: 47.4%;
+  padding-top: 163px;
   margin-bottom: 8px;
 
   @include vp-1023 {
     width: 100%;
     margin-bottom: 53px;
+    padding-top: 0;
   }
 
   @include vp-767 {

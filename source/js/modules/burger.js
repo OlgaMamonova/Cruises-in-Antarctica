@@ -1,5 +1,5 @@
 const initBurger = () => {
-  const header = document.querySelector('.header');
+  const header = document.querySelector('.header__wrapper');
   const body = document.querySelector('body');
   const burgerToggle = header.querySelector('.header__burger-toggle');
   const navList = header.querySelector('.nav__list');
@@ -19,19 +19,26 @@ const initBurger = () => {
     closeMenu();
   };
 
+  const onOverlayClick = (evt) => {
+    const Overlay = evt.composedPath().includes(header);
+    if (!Overlay) {
+      closeMenu();
+    }
+  };
+
   const openMenu = () => {
-    body.classList.add('scroll-lock');
-    header.classList.add('header--menu-opened');
+    body.classList.add('is-opened');
     navList.addEventListener('click', onNavListClick);
     logoLink.addEventListener('click', onLogoLinkClick);
+    document.addEventListener('click', onOverlayClick);
   };
 
   const closeMenu = () => {
-    body.classList.remove('scroll-lock');
-    header.classList.remove('header--menu-opened');
+    body.classList.remove('is-opened');
     burgerToggle.removeEventListener('click', closeMenu);
     navList.removeEventListener('click', onNavListClick);
     logoLink.removeEventListener('click', onLogoLinkClick);
+    document.removeEventListener('click', onOverlayClick);
     burgerToggle.addEventListener('click', onBurgerTogleClick);
   };
 

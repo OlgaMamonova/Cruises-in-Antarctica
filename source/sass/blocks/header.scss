@@ -5,15 +5,6 @@
   left: 0;
   right: 0;
   z-index: 1;
-  padding: 35px 0;
-
-  @include vp-1023 {
-    padding: 28px 0;
-  }
-
-  @include vp-767 {
-    padding: 20px 0;
-  }
 }
 
 .header__nav {
@@ -38,10 +29,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  @include vp-1023 {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
 
   @include vp-767 {
     flex-direction: column;
     justify-content: start;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -96,16 +96,11 @@
   opacity: 0.6;
 }
 
-.header--menu-opened {
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 43, 102, 0.5) 11.25%,
-    rgba(249, 251, 253, 1) 11.25%
-  );
-
+.is-opened .header {
   & .header__wrapper {
     margin-left: 11.25%;
     width: 88.75%;
+    background-color: $color-alice-blue;
     height: 100vh;
     overflow: scroll;
   }

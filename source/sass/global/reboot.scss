@@ -76,3 +76,18 @@ button,
 [type="submit"] {
   appearance: none;
 }
+
+body.is-opened {
+  overflow: hidden;
+}
+
+body.is-opened::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 43, 102, 0.5);
+  width: 11.25%;
+  height: 100%;
+  z-index: 1;
+}

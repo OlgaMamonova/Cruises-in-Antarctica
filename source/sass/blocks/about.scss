@@ -1,7 +1,6 @@
 .about {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-top: 117px;
   padding-bottom: 145px;
 
@@ -61,9 +60,11 @@
 
 .about__text {
   width: 44.18%;
+  padding-top: 59px;
 
   @include vp-1023 {
     width: 47.78%;
+    padding-top: 0;
   }
 
   @include vp-767 {
