@@ -42,27 +42,28 @@
 
 .cruises__card {
   background-color: $color-tangaroa;
-  color: $color-alice-blue;
-  padding: 28px 25px 8px;
-  height: 386px;
   position: relative;
-  z-index: 0;
   overflow-y: scroll;
-
-  @include vp-1023 {
-    padding: 27px 35px 12px 35px;
-  }
-
-  @include vp-767 {
-    padding: 28px 25px 3px;
-  }
 }
 
 .cruises__card-content {
+  color: $color-alice-blue;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  padding: 28px 25px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include vp-1023 {
+    padding: 27px 35px 0 35px;
+  }
+
+  @include vp-767 {
+    padding: 28px 25px 0;
+  }
 }
 
 .cruises__card h3 {
@@ -70,11 +71,17 @@
   line-height: 27px;
   font-weight: 500;
   margin: 0;
+  margin-top: auto;
   margin-left: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 23px;
 
   @include vp-1023 {
     margin-left: 0;
+    margin-bottom: 28px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 18px;
   }
 }
 
@@ -83,6 +90,7 @@
   line-height: 19.6px;
   margin-bottom: 10px;
   margin-top: 0;
+  flex-grow: 1;
 }
 
 .cruises__card dt {
@@ -102,40 +110,36 @@
 
 .cruises__card img {
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
   width: 100%;
-  height: 100%;
-  z-index: -1;
+  height: auto;
 }
 
 .cruises__card:hover .cruises__hidden-content,
 .cruises__card:focus-within .cruises__hidden-content {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 308px;
-  padding-bottom: 27px;
-
-  @include vp-1023 {
-    padding-bottom: 23px;
-    min-height: 305px;
-  }
-
-  @include vp-767 {
-    padding-bottom: 32px;
-    min-height: 313px;
-  }
+  padding-bottom: 35px;
 }
 
 .cruises__card:hover h3,
 .cruises__card:focus-within h3 {
+  margin-top: 0;
   margin-left: 0;
+  margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 14px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 14px;
+  }
 }
 
 .cruises__card:hover img,
 .cruises__card:focus-within img {
-  width: 0;
+  opacity: 0;
+  object-fit: cover;
 }
