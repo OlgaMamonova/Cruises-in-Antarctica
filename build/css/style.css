@@ -1236,6 +1236,9 @@ body.is-opened::after {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   padding: 0 105px;
 }
 
@@ -1265,6 +1268,9 @@ body.is-opened::after {
   background-color: #011c40;
   color: #f9fbfd;
   width: 403px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   padding: 43px 50px 50px;
 }
 

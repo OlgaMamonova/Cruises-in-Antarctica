@@ -31,6 +31,7 @@
 .booking__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: start;
   padding: 0 105px;
 
   @include vp-1023 {
@@ -100,6 +101,7 @@
   background-color: $color-tangaroa;
   color: $color-alice-blue;
   width: 403px;
+  max-height: max-content;
   padding: 43px 50px 50px;
 
   @include vp-767 {
