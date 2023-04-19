@@ -45,7 +45,7 @@
 }
 
 .footer__nav {
-  max-width: 69%;
+  max-width: 74%;
 
   @include vp-767 {
     max-width: 100%;
@@ -66,13 +66,5 @@
 .footer__nav .nav__item:not(:last-of-type) {
   @include vp-767 {
     margin-bottom: 9px;
-  }
-}
-
-.footer__nav .nav__list {
-  @include vp-1023 {
-    grid-template-columns:
-      minmax(60px, 97px) minmax(60px, 97px) minmax(60px, 128px)
-      minmax(60px, 97px);
   }
 }

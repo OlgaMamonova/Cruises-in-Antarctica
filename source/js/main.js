@@ -3,9 +3,7 @@ import {Form} from './modules/form-validate/form';
 import {initBurger} from './modules/burger';
 import {initSmoothScroll} from './modules/smooth-scroll';
 
-
 window.addEventListener('DOMContentLoaded', () => {
-
   // Utils
   // ---------------------------------
 

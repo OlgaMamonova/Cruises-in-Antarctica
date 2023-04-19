@@ -805,10 +805,14 @@ button,
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: minmax(80px, 130px) minmax(80px, 130px) minmax(80px, 170px) minmax(80px, 130px);
-  grid-template-columns: minmax(80px, 130px) minmax(80px, 130px) minmax(80px, 170px) minmax(80px, 130px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   gap: 15px 34px;
 }
 
@@ -1394,7 +1398,7 @@ button,
 }
 
 .footer__nav {
-  max-width: 69%;
+  max-width: 74%;
 }
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1024px) and (min-resolution: 2dppx) {
@@ -1418,8 +1422,6 @@ button,
   }
 
   .nav__list {
-    -ms-grid-columns: minmax(70px, 113px) minmax(70px, 113px) minmax(70px, 149px) minmax(70px, 113px);
-    grid-template-columns: minmax(70px, 113px) minmax(70px, 113px) minmax(70px, 149px) minmax(70px, 113px);
     gap: 15px 24px;
   }
 
@@ -1630,11 +1632,6 @@ button,
   .footer__nav .nav__link {
     font-size: 12px;
   }
-
-  .footer__nav .nav__list {
-    -ms-grid-columns: minmax(60px, 97px) minmax(60px, 97px) minmax(60px, 128px) minmax(60px, 97px);
-    grid-template-columns: minmax(60px, 97px) minmax(60px, 97px) minmax(60px, 128px) minmax(60px, 97px);
-  }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
@@ -1696,9 +1693,6 @@ button,
   }
 
   .nav__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     gap: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1733,8 +1727,8 @@ button,
     display: none;
   }
 
-  .header__nav .nav__item {
-    margin-bottom: 26px;
+  .header__nav .nav__list {
+    gap: 26px 0;
   }
 
   .header__nav .nav__link {
@@ -1794,11 +1788,15 @@ button,
     -ms-flex-item-align: start;
     -ms-grid-row-align: start;
     align-self: start;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 
   .is-opened .header .logo__svg {
     color: #011c40;
+  }
+
+  .is-opened .header .header__burger-toggle {
+    margin-right: -6px;
   }
 
   .is-opened .header .header__burger-line {

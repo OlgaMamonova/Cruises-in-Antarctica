@@ -14,8 +14,8 @@
     max-width: 100%;
     display: none;
 
-    & .nav__item {
-      margin-bottom: 26px;
+    & .nav__list {
+      gap: 26px 0;
     }
 
     & .nav__link {
@@ -116,11 +116,15 @@
     & .header__nav {
       display: block;
       align-self: start;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
 
     & .logo__svg {
       color: $color-tangaroa;
+    }
+
+    & .header__burger-toggle {
+      margin-right: -6px;
     }
 
     & .header__burger-line {
