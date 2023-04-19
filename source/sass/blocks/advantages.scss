@@ -56,12 +56,12 @@
   background-color: $color-alice-blue;
   display: flex;
   flex-direction: column;
-  padding: 80px 30px 45px 30px;
+  padding: 80px 30px 35px 30px;
   background-repeat: no-repeat;
   background-position: 30px 30px;
 
   @include vp-1023 {
-    padding: 70px 16px 20px 20px;
+    padding: 70px 16px 10px 20px;
     background-position: 20px 26px;
   }
 
@@ -117,4 +117,5 @@
   font-size: 14px;
   line-height: 20px;
   flex-grow: 1;
+  padding-bottom: 10px;
 }

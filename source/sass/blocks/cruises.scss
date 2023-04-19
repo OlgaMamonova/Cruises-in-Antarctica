@@ -43,7 +43,6 @@
 .cruises__card {
   background-color: $color-tangaroa;
   position: relative;
-  overflow-y: scroll;
 }
 
 .cruises__card-content {
@@ -56,6 +55,8 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  overflow-y: scroll;
 
   @include vp-1023 {
     padding: 27px 35px 0 35px;
@@ -100,7 +101,7 @@
 
 .cruises__card dd {
   margin: 0;
-  color: $color-qaurtz;
+  color: $color-quartz;
   margin-bottom: 12px;
 }
 
@@ -121,6 +122,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 35px;
+  z-index: 1;
 }
 
 .cruises__card:hover h3,
@@ -140,6 +142,7 @@
 
 .cruises__card:hover img,
 .cruises__card:focus-within img {
+  z-index: -1;
   opacity: 0;
   object-fit: cover;
 }

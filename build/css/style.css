@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -510,19 +512,26 @@ button,
   appearance: none;
 }
 
-body.is-opened {
-  overflow: hidden;
+/* Работает в Firefox */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d8d8d9 transparent;
 }
 
-body.is-opened::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 43, 102, 0.5);
-  width: 11.25%;
-  height: 100%;
-  z-index: 1;
+/* Работает в Chrome, Edge и Safari */
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #d8d8d9;
+  border-radius: 10px;
 }
 
 .wrapper {
@@ -595,6 +604,7 @@ body.is-opened::after {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-align: center;
 }
 
 .button:disabled {
@@ -791,26 +801,15 @@ body.is-opened::after {
   color: #f9fbfd;
 }
 
-.nav {
-  max-width: 80%;
-}
-
 .nav__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.nav__item {
-  margin-left: 34px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(80px, 130px) minmax(80px, 130px) minmax(80px, 170px) minmax(80px, 130px);
+  grid-template-columns: minmax(80px, 130px) minmax(80px, 130px) minmax(80px, 170px) minmax(80px, 130px);
+  gap: 15px 34px;
 }
 
 .nav__link {
@@ -881,6 +880,10 @@ body.is-opened::after {
   z-index: 1;
 }
 
+.header__nav {
+  max-width: 90%;
+}
+
 .header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -928,51 +931,6 @@ body.is-opened::after {
   opacity: 0.6;
 }
 
-.is-opened .header .header__wrapper {
-  margin-left: 11.25%;
-  width: 88.75%;
-  background-color: #f9fbfd;
-  height: 100vh;
-  overflow: scroll;
-}
-
-.is-opened .header .header__mobile-wrapper {
-  margin-bottom: 42px;
-}
-
-.is-opened .header .header__nav {
-  display: block;
-  -ms-flex-item-align: start;
-  -ms-grid-row-align: start;
-  align-self: start;
-  margin-bottom: 30px;
-}
-
-.is-opened .header .logo__svg {
-  color: #011c40;
-}
-
-.is-opened .header .header__burger-line {
-  background-color: #011c40;
-  width: 18.4px;
-}
-
-.is-opened .header .header__burger-line--second {
-  width: 0;
-}
-
-.is-opened .header .header__burger-line--first {
-  -webkit-transform: rotate(-45deg) translateY(8px);
-  -ms-transform: rotate(-45deg) translateY(8px);
-  transform: rotate(-45deg) translateY(8px);
-}
-
-.is-opened .header .header__burger-line--third {
-  -webkit-transform: rotate(45deg) translateY(-8px);
-  -ms-transform: rotate(45deg) translateY(-8px);
-  transform: rotate(45deg) translateY(-8px);
-}
-
 .promo {
   background-color: #011c40;
   color: #f9fbfd;
@@ -982,6 +940,7 @@ body.is-opened::after {
   padding: 270px 0 278px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   background-image: url("../img/background/promo-desktop.webp");
 }
 
@@ -1072,7 +1031,7 @@ body.is-opened::after {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 80px 30px 45px 30px;
+  padding: 80px 30px 35px 30px;
   background-repeat: no-repeat;
   background-position: 30px 30px;
 }
@@ -1104,6 +1063,7 @@ body.is-opened::after {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  padding-bottom: 10px;
 }
 
 .cruises {
@@ -1129,7 +1089,6 @@ body.is-opened::after {
 .cruises__card {
   background-color: #011c40;
   position: relative;
-  overflow-y: scroll;
 }
 
 .cruises__card-content {
@@ -1147,6 +1106,7 @@ body.is-opened::after {
   position: absolute;
   top: 0;
   left: 0;
+  overflow-y: scroll;
 }
 
 .cruises__card h3 {
@@ -1206,6 +1166,7 @@ body.is-opened::after {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-bottom: 35px;
+  z-index: 1;
 }
 
 .cruises__card:hover h3,
@@ -1217,6 +1178,7 @@ body.is-opened::after {
 
 .cruises__card:hover img,
 .cruises__card:focus-within img {
+  z-index: -1;
   opacity: 0;
   -o-object-fit: cover;
   object-fit: cover;
@@ -1224,6 +1186,7 @@ body.is-opened::after {
 
 .booking {
   padding: 50px 0;
+  background-color: #f9fbfd;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../img/background/booking-desktop.webp");
@@ -1345,6 +1308,16 @@ body.is-opened::after {
 }
 
 .contacts__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   width: 43.1%;
   padding-top: 74px;
 }
@@ -1417,7 +1390,7 @@ body.is-opened::after {
 }
 
 .footer__logo {
-  margin-right: 6px;
+  margin-right: 40px;
 }
 
 .footer__nav {
@@ -1444,8 +1417,10 @@ body.is-opened::after {
     height: 20px;
   }
 
-  .nav__item {
-    margin-left: 24px;
+  .nav__list {
+    -ms-grid-columns: minmax(70px, 113px) minmax(70px, 113px) minmax(70px, 149px) minmax(70px, 113px);
+    grid-template-columns: minmax(70px, 113px) minmax(70px, 113px) minmax(70px, 149px) minmax(70px, 113px);
+    gap: 15px 24px;
   }
 
   .nav__link {
@@ -1534,7 +1509,7 @@ body.is-opened::after {
   }
 
   .advantages__item {
-    padding: 70px 16px 20px 20px;
+    padding: 70px 16px 10px 20px;
     background-position: 20px 26px;
   }
 
@@ -1649,11 +1624,16 @@ body.is-opened::after {
   }
 
   .footer__logo {
-    margin-right: 1px;
+    margin-right: 25px;
   }
 
   .footer__nav .nav__link {
     font-size: 12px;
+  }
+
+  .footer__nav .nav__list {
+    -ms-grid-columns: minmax(60px, 97px) minmax(60px, 97px) minmax(60px, 128px) minmax(60px, 97px);
+    grid-template-columns: minmax(60px, 97px) minmax(60px, 97px) minmax(60px, 128px) minmax(60px, 97px);
   }
 }
 
@@ -1672,6 +1652,21 @@ body.is-opened::after {
 }
 
 @media (max-width: 767px) {
+  body.is-opened {
+    overflow-y: hidden;
+  }
+
+  body.is-opened::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 43, 102, 0.5);
+    width: 11.25%;
+    height: 100%;
+    z-index: 1;
+  }
+
   .mobile-only {
     display: block;
   }
@@ -1700,19 +1695,15 @@ body.is-opened::after {
     height: 22px;
   }
 
-  .nav {
-    max-width: 100%;
-  }
-
   .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-
-  .nav__item {
-    margin-left: 0;
   }
 
   .nav__link {
@@ -1738,6 +1729,7 @@ body.is-opened::after {
   }
 
   .header__nav {
+    max-width: 100%;
     display: none;
   }
 
@@ -1783,6 +1775,51 @@ body.is-opened::after {
     background-color: transparent;
     width: 24px;
     height: 22px;
+  }
+
+  .is-opened .header .header__wrapper {
+    margin-left: 11.25%;
+    width: 88.75%;
+    background-color: #f9fbfd;
+    height: 100vh;
+    overflow: scroll;
+  }
+
+  .is-opened .header .header__mobile-wrapper {
+    margin-bottom: 42px;
+  }
+
+  .is-opened .header .header__nav {
+    display: block;
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+    margin-bottom: 30px;
+  }
+
+  .is-opened .header .logo__svg {
+    color: #011c40;
+  }
+
+  .is-opened .header .header__burger-line {
+    background-color: #011c40;
+    width: 18.4px;
+  }
+
+  .is-opened .header .header__burger-line--second {
+    width: 0;
+  }
+
+  .is-opened .header .header__burger-line--first {
+    -webkit-transform: rotate(-45deg) translateY(8px);
+    -ms-transform: rotate(-45deg) translateY(8px);
+    transform: rotate(-45deg) translateY(8px);
+  }
+
+  .is-opened .header .header__burger-line--third {
+    -webkit-transform: rotate(45deg) translateY(-8px);
+    -ms-transform: rotate(45deg) translateY(-8px);
+    transform: rotate(45deg) translateY(-8px);
   }
 
   .promo {
@@ -1927,6 +1964,11 @@ body.is-opened::after {
     width: 100%;
     margin-bottom: 33px;
     padding-top: 0;
+  }
+
+  .contacts__text address {
+    margin-bottom: 11px;
+    padding-bottom: 10px;
   }
 
   .footer {

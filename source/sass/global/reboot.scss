@@ -78,16 +78,41 @@ button,
 }
 
 body.is-opened {
-  overflow: hidden;
+  @include vp-767 {
+    overflow-y: hidden;
+  }
 }
 
 body.is-opened::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 43, 102, 0.5);
-  width: 11.25%;
-  height: 100%;
-  z-index: 1;
+  @include vp-767 {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 43, 102, 0.5);
+    width: 11.25%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+// scroll-bar
+/* Работает в Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $color-quartz transparent;
+}
+
+/* Работает в Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $color-quartz;
+  border-radius: 10px;
 }
